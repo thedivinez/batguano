@@ -169,7 +169,6 @@
     $("#datepicker-inline").datepicker();
   }
 
-  $('input[name="time"]').ptTimeSelect();
 
   if ($(".banner-bg-slide").length) {
     $(".banner-bg-slide").each(function () {
@@ -219,8 +218,8 @@
         var percent = el.data("percent");
         $(el).css("width", percent).addClass("counted");
       }, {
-        accY: -50
-      }
+      accY: -50
+    }
     );
   }
 
@@ -233,8 +232,8 @@
           $(this).css("width", progressWidth + "%");
         });
       }, {
-        accY: 0
-      }
+      accY: 0
+    }
     );
   }
 
@@ -264,8 +263,8 @@
           });
         }
       }, {
-        accY: 0
-      }
+      accY: 0
+    }
     );
   }
 
@@ -305,8 +304,8 @@
       var target = $(this).attr("data-target");
       // animate
       $("html, body").animate({
-          scrollTop: $(target).offset().top
-        },
+        scrollTop: $(target).offset().top
+      },
         1000
       );
 
@@ -578,8 +577,8 @@
     if ($(this).next().val() > 1) {
       if ($(this).next().val() > 1)
         $(this)
-        .next()
-        .val(+$(this).next().val() - 1);
+          .next()
+          .val(+$(this).next().val() - 1);
     }
   });
 
@@ -805,8 +804,8 @@
         $("html, body")
           .stop()
           .animate({
-              scrollTop: $(target.attr("href")).offset().top - headerH + "px"
-            },
+            scrollTop: $(target.attr("href")).offset().top - headerH + "px"
+          },
             1200,
             "easeInOutExpo"
           );
