@@ -10700,6 +10700,10 @@ ul {
   display: block;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 .product-details__buttons-1 .thm-btn {
   padding-left: 50px;
 }

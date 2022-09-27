@@ -1,8 +1,8 @@
-import path from 'path';
-import express from 'express';
-import livereload from "livereload";
-import { engine } from 'express-handlebars';
-import connectLiveReload from "connect-livereload";
+const path = require('path');
+const express = require('express');
+const livereload = require("livereload");
+const hbs = require('express-handlebars');
+const connectLiveReload = require("connect-livereload");
 
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => setTimeout(() => liveReloadServer.refresh("/"), 100));
@@ -15,7 +15,7 @@ app.use(connectLiveReload());
 app.set('view engine', '.hbs');
 app.use(express.static("public"));
 
-app.engine('.hbs', engine({
+app.engine('.hbs', hbs.engine({
   extname: '.hbs', defaultLayout: "base",
   layoutsDir: path.join("views", "layouts"),
   partialsDir: path.join("views", "partials"),
